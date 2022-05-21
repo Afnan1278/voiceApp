@@ -311,7 +311,7 @@ const Message = ({
     : imagePlaceholder;
   const profile = isChannel ? channeluserProfile : chatUserprofile;
   const date = formateDate(message.time, "hh:mmaaa");
-  const isSent = message.meta.sent;
+  const isSent = message.meta.sent;  
   const isReceived = message.meta.received;
   const isRead = message.meta.read;
   const isForwarded = message.meta.isForwarded;
