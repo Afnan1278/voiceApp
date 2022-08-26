@@ -132,7 +132,7 @@ const Login = (props: LoginProps) => {
     // <NonAuthLayoutWrapper>
       <Row className=" justify-content-center my-auto">
         <Col sm={8} lg={6} xl={5} className="col-xxl-4">
-          <div className="py-md-5 py-4">
+          <div className="py-md-5 py-4 px-3">
             <AuthHeader
               title="Welcome Back !"
               subtitle="Sign in to continue to App."

@@ -54,6 +54,7 @@
 
 .chat-group-list {
   height: calc(100vh - 140px);
+
   @media (max-width: 991.98px) {
     height: calc(100vh - 194px);
   }
@@ -65,11 +66,12 @@
   li {
     &.active {
       a {
-        background-color: rgba(var(--bs-primary-rgb), 1);
+        background-color: rgba(var(--bs-warning-rgb), 1);
         color: $white;
 
         span.avatar-title {
-          color: $white !important;
+          color: $white  !important;
+
           &.bg-light {
             background-color: rgba($light, 0.25) !important;
           }
@@ -77,7 +79,7 @@
 
         .badge {
           background-color: rgba($light, 0.25) !important;
-          color: $white !important;
+          color: $white  !important;
         }
       }
     }
@@ -112,8 +114,12 @@
     .unread-message {
       position: absolute;
       display: inline-block;
-      right: 24px /*rtl:auto*/;
-      left: auto /*rtl:0*/;
+      right: 24px
+        /*rtl:auto*/
+      ;
+      left: auto
+        /*rtl:0*/
+      ;
       top: 33px;
 
       .badge {
@@ -168,6 +174,7 @@
   font-weight: $font-weight-medium;
   position: relative;
   font-size: 12px;
+
   &:after {
     content: "";
     height: 1px;
@@ -189,6 +196,7 @@
   @media (max-width: 991.98px) {
     height: calc(100vh - 125px);
   }
+
   li {
     position: relative;
     padding: 10px 24px;
@@ -208,8 +216,12 @@
 
   .profile-photo-edit {
     position: absolute;
-    right: 0 /*rtl:auto*/;
-    left: auto /*rtl:0*/;
+    right: 0
+      /*rtl:auto*/
+    ;
+    left: auto
+      /*rtl:0*/
+    ;
     bottom: 0;
     cursor: pointer;
   }
@@ -225,12 +237,14 @@
 
 .theme-btn-list {
   &.theme-color-list {
-    .form-check .form-check-input:checked + .form-check-label::before {
+    .form-check .form-check-input:checked+.form-check-label::before {
       color: $white;
     }
   }
+
   .form-check {
     padding: 0;
+
     .form-check-input {
       display: none;
     }
@@ -239,7 +253,7 @@
       position: relative;
     }
 
-    .form-check-input:checked + .form-check-label {
+    .form-check-input:checked+.form-check-label {
       &::before {
         content: "\e9a4";
         font-family: boxicons !important;

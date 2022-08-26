@@ -15,7 +15,7 @@ a {
 
 .btn-dark,
 .btn-secondary {
-  color: $gray-200 !important;
+  color: $gray-200  !important;
 }
 
 .btn-outline-light {
@@ -59,7 +59,8 @@ a {
   }
 }
 
-@each $color, $value in $theme-colors {
+@each $color,
+$value in $theme-colors {
   .btn-soft-#{$color} {
     @include button-variant-soft($value);
   }
@@ -93,10 +94,17 @@ a {
 }
 
 body[data-layout-mode="dark"] {
+
   // buttons
   .btn-light {
     color: $gray-dark-600;
     background-color: $gray-dark-300;
-    border-color: $gray-dark-300 !important;
+    border-color: $gray-dark-300  !important;
+  }
+
+  .btn-red {
+    color: $red;
+    // background-color: $red;
+    // border-color: $red  !important;
   }
 }

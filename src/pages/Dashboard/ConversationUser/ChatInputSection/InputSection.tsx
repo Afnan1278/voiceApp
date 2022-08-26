@@ -27,12 +27,12 @@ const InputSection = ({ value, onChange,note, start, stop, recording }: InputSec
          <Button
           color="none"
           type="button"
-          className="btn btn-link text-decoration-none btn-lg waves-effect"
+          className="btn btn-link text-decoration-none btn-lg waves-effect btn-red"
           onClick={handlerAudio}
           // disabled={msg.isRecording}
           id="audio-btn"
         >
-          <i className="bx bx-microphone align-middle"></i>
+          <i style={{fontSize: "50px"}} className="bx bx-microphone align-middle"></i>
         </Button>
       <Popover  isOpen={recording} trigger="focus" placement="top" target="audio-btn">   
       <PopoverBody>

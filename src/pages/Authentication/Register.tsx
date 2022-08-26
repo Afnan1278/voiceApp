@@ -84,7 +84,7 @@ const Register = (props: RegisterProps) => {
     // <NonAuthLayoutWrapper>
       <Row className=" justify-content-center my-auto">
         <Col sm={8} lg={6} xl={5} className="col-xxl-4">
-          <div className="py-md-5 py-4">
+          <div className="py-md-5 py-4 px-3">
             <AuthHeader
               title="Register Account"
               // subtitle="Get your free Doot account now."

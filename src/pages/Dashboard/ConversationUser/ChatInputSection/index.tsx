@@ -115,7 +115,6 @@ const Index = ({
  
   
   const onSubmit = () => {
-    debugger
     let data: any = {};
     if (text) {
       data["text"] = text;
@@ -164,7 +163,7 @@ const Index = ({
 
     }
 
-    setText(""); 
+    setText("");
     setMsg({...msg, isRecording: false });
     setImages(null);
     setFiles(null);
@@ -176,7 +175,7 @@ const Index = ({
     setFiles(null);
   };
   return (
-    <div className="chat-input-section p-3 p-lg-4 d-flex justify-content-center">
+    <div  className="chat-input-section p-3 p-lg-4 d-flex justify-content-center"   >
       <Form
         id="chatinput-form"
         onSubmit={(e: any) => {
@@ -184,7 +183,7 @@ const Index = ({
           onSubmit();
         }}
       >
-        <div className="row g-0 align-items-center">
+        <div className="row g-0 align-items-center justify-content-center" style={{paddingLeft:"14px"}}>
           {/* <div className="col-auto">
             <StartButtons
               onToggle={onToggle}
@@ -193,7 +192,7 @@ const Index = ({
             />
           </div> */}
            {msg.isRecording && counter}
-          <div className="col">
+          <div className="col" >
            
             <InputSection note={voicenote} value={text} onChange={onChangeText} recording={msg.isRecording}  start={start} stop={stop}/>
           </div>

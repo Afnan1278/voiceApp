@@ -279,7 +279,6 @@ const fakeBackend = () => {
   bookmarks
   */
   mock.onGet(url.GET_BOOKMARKS_LIST).reply(config => {
-    debugger
     return new Promise((resolve, reject) => {
       if (bookmarks) {
         resolve([200, bookmarks]);

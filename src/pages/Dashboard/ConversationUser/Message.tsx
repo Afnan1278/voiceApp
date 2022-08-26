@@ -311,7 +311,7 @@ const Message = ({
     : imagePlaceholder;
   const profile = isChannel ? channeluserProfile : chatUserprofile;
   const date = formateDate(message.time, "hh:mmaaa");
-  const isSent = message.meta.sent;  
+  const isSent = message.meta.sent;
   const isReceived = message.meta.received;
   const isRead = message.meta.read;
   const isForwarded = message.meta.isForwarded;
@@ -351,7 +351,7 @@ const Message = ({
           <img src={isFromMe ? myProfile : profile} alt="" />
         </div>
 
-        <div className="user-chat-content">
+        <div className="user-chat-content" style={{width: "-webkit-fill-available"}}>
           {hasImages && message.text && (
             <div className="ctext-wrap">
               <div className="ctext-wrap-content">
@@ -391,7 +391,7 @@ const Message = ({
               </>
             ) : (
               <>
-                <div className="ctext-wrap-content">
+                <div className="ctext-wrap-content " style={{padding:"10px"}}>
                   {isRepliedMessage && (
                     <RepliedMessage
                       fullName={fullName}
@@ -399,14 +399,39 @@ const Message = ({
                       isFromMe={isFromMe}
                     />
                   )}
-                  
+                  {/* {
+                    !isFromMe &&  <Menu
+                    onForward={onForwardMessage}
+                    onDelete={onDeleteMessage}
+                    onReply={onClickReply}
+                    onBookmark={onAddBookmark}
+                  />
+                  } */}
                   {hasText && (
                     <p className="mb-0 ctext-content">{message.text}</p>
                   )}
-                   {hasNote && (
-                     <audio src={message.note} controls={true} />
-                    // <p className="mb-0 ctext-content">{URL.createObjectURL(message.note)}</p>
-                  )}
+                  <div className="d-flex">
+                  {isFromMe && <Menu
+                      onForward={onForwardMessage}
+                      onDelete={onDeleteMessage}
+                      onReply={onClickReply}
+                      onBookmark={onAddBookmark}
+                    />}
+                    {hasNote && (
+                      <audio src={message.note} controls={true} />
+                      // <p className="mb-0 ctext-content">{URL.createObjectURL(message.note)}</p>
+                    )}
+                   
+                    {!isFromMe && <Menu
+                      onForward={onForwardMessage}
+                      onDelete={onDeleteMessage}
+                      onReply={onClickReply}
+                      onBookmark={onAddBookmark}
+                    />}
+                    
+                    
+                  </div>
+                   
 
                   {/* typing start */}
                   {isTyping && <Typing />}
@@ -418,12 +443,7 @@ const Message = ({
                   )}
                   {/* files message end */}
                 </div>
-                <Menu
-                  onForward={onForwardMessage}
-                  onDelete={onDeleteMessage}
-                  onReply={onClickReply}
-                  onBookmark={onAddBookmark}
-                />
+                
               </>
             )}
 

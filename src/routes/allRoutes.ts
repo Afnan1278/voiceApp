@@ -13,6 +13,7 @@ import LockScreen from "../pages/Authentication/LockScreen";
 // dashboard
 import Dashboard from "../pages/Dashboard/index";
 import StarterPage from "../pages/StarterPage/index";
+import Demo from "../pages/demo/Demo";
 
 interface RouteProps {
   path: string;
@@ -22,6 +23,7 @@ interface RouteProps {
 
 const publicRoutes: Array<RouteProps> = [
   { path: "/auth-login", component: Login },
+  { path: "/demo/:vmId", component: Demo },
   { path: "/auth-register", component: Register },
   { path: "/auth-recoverpw", component: RecoverPassword },
   { path: "/auth-changepassword", component: ChangePassword },

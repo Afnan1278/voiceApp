@@ -27,7 +27,7 @@ const Logout = (props: any) => {
     // <NonAuthLayoutWrapper>
       <Row className="justify-content-center my-auto">
         <Col sm={8} lg={6} xl={5} className="col-xxl-4">
-          <div className="py-md-5 py-4 text-center">
+          <div className="py-md-5 py-4 px-3 text-center">
             <div className="avatar-xl mx-auto">
               <div className="avatar-title bg-soft-primary text-primary h1 rounded-circle">
                 <i className="bx bxs-user"></i>
