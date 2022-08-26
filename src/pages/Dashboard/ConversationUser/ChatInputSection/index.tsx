@@ -164,7 +164,7 @@ const Index = ({
 
     }
 
-    setText("");
+    setText(""); 
     setMsg({...msg, isRecording: false });
     setImages(null);
     setFiles(null);
